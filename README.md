@@ -7,7 +7,7 @@ The **cmrf** package implements **C**ross-**M**edia **R**elevance **F**usion [1]
 
 It is complete solution for [MSR-Bing Image Retrieval Challenge](http://research.microsoft.com/en-US/projects/irc/).
 
-## Prerequisites:
+### Prerequisites:
 * Download the sample [training](http://www.mmc.ruc.edu.cn/research/irc2015/data/msr2013train.tar.gz) and [dev](http://www.mmc.ruc.edu.cn/research/irc2015/data/msr2013dev.tar.gz) data without image visual feature.
 * Download at leaset three visual feature ( i.e. [train.caffenet.fc7](http://www.mmc.ruc.edu.cn/research/irc2015/data/train.ruccaffefc7.imagenet.tar.gz) [dev.caffenet.fc7](http://www.mmc.ruc.edu.cn/research/irc2015/data/dev.ruccaffefc7.imagenet.tar.gz) [dev.caffenet.prob](http://www.mmc.ruc.edu.cn/research/irc2015/data/dev.ruccaffeprob.imagenet.tar.gz)) and extract them into 'FeatureData' folder of sample data. All visual features had been used in our paper can be download from our [project page](http://www.mmc.ruc.edu.cn/research/irc2015/index.html).
 * Change `ROOT_PATH` in [basic/common.py](basic/common.py) to local folder where training and dev data are stored in
