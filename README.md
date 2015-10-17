@@ -1,9 +1,9 @@
 # cmrf
 
 The **cmrf** package implements **C**ross-**M**edia **R**elevance **F**usion [1], with
-four individual method (i.e. image2text, text2image, text2image as Parzen window and semantic embedding)
-learning optimized weights for relevance fusion
-cross-platform support (linux, mac, windows) 
+* four individual method (i.e. image2text, text2image, text2image as Parzen window and semantic embedding)
+* learning optimized weights for relevance fusion
+* cross-platform support (linux, mac, windows) 
 
 # Prerequisites:
 The package does not include any visual feature extractors. Features of training and test data need to be pre-computed, and converted to required binary format using txt2bin.py.
