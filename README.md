@@ -6,12 +6,12 @@ four individual method (i.e. image2text, text2image, text2image as Parzen window
 learning optimized weights for relevance fusion
 cross-platform support (linux, mac, windows) 
 
-Prerequisites:
+# Prerequisites:
 The package does not include any visual feature extractors. Features of training and test data need to be pre-computed, and converted to required binary format using txt2bin.py.
 To minimize one's coding effort, the package requires training data and test data to be organized in a fixed structure, see the sample data.
 All visual features had been used in our paper can be download from our project page.
 
-Setup:
+# Setup:
 Download simpleknn and add it to PYTHONPATH.
 Change ROOT_PATH in basic/common.py to local folder where training and dev data are stored.
 Download sample data (from Clickture Dataset) without pre-computed visual feature.
@@ -30,11 +30,11 @@ Relevance fusion:
 we employ Coordinate Ascent to learn optimized weights, then fuse different methods.
 The detials of employing relevance fusion, please refer to 'fusion_example.sh' and source code.
 
-Note:
+# Note:
 After running different individual methods, you need firstly write the result path of these methods into file "data/{inputfile=data_source.txt}". The format of {inputfile}: first line is the path of ture label of valid date, following lines are the path of different individual methods, one line one method.
 
 For ease of efficiency, we only run 20 text queries. If you want to run all 1000 queries, please rewrite the file name of 'qid.text.all.txt' in /rootpath/msr2013dev/Annotations/ into 'qid.text.txt', while the program will take a while.
 
 
-Reference:
+# Reference:
 Jianfeng Dong, Xirong Li, Shuai Liao, Jieping Xu, Duanqing Xu, Xiaoyong Du. Image Retrieval by Cross-Media Relevance Fusion. ACM multimedia 2015
