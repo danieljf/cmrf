@@ -21,15 +21,15 @@ Download [training](http://www.mmc.ruc.edu.cn/research/irc2015/data/msr2013train
 
 
 As image and query are of two distinct modalities, they have to be represented in a common space so that cross-media relevance can be computed. We implement four individual methods in our package.
-**individual methods**:
-* image2text: project image and query into Bag-of-Words space.
-* text2image: project image and query into visual feature space.
-* text2image as Parzen window: an extreme case of text2image.
-* semantic embedding:  project image and query into semantic space.
+#####individual methods:
+* **image2text**: project image and query into Bag-of-Words space.
+* **text2image**: project image and query into visual feature space.
+* **text2image as Parzen window**: an extreme case of text2image.
+* **semantic embedding**:  project image and query into semantic space.
 
 How to run these methods using our package, please refer to 'search_example.sh' and source code.
 
-**Relevance fusion**:
+#####Relevance fusion:
 * we employ Coordinate Ascent to learn optimized weights, then fuse different methods.
 
 The detials of employing relevance fusion, please refer to 'fusion_example.sh' and source code.
