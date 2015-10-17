@@ -18,7 +18,7 @@ It is complete solution for [MSR-Bing Image Retrieval Challenge](http://research
 
 
 ## Content:
-In order to generate cross-media relevance, image and query have to be represented in a common space as they are of two distinct modalities. In our package, we implement four individual methods and how to fuse relevance form different methods.
+In order to generate cross-media relevance, image and query have to be represented in a common space as they are of two distinct modalities. In our package, we implement four individual methods and how to fuse relevance from different methods.
 
 #####individual methods:
 * [image2text](image2text.py): project image and query into Bag-of-Words space.
