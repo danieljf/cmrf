@@ -4,6 +4,7 @@ The **cmrf** package implements **C**ross-**M**edia **R**elevance **F**usion [1]
 * four individual method (i.e. image2text, text2image, text2image as Parzen window and semantic embedding),
 * learning optimized weights for relevance fusion,
 * cross-platform support (linux, mac, windows).
+
 It is complete solution for [MSR-Bing Image Retrieval Challenge](http://research.microsoft.com/en-US/projects/irc/).
 
 ## Prerequisites:
@@ -16,18 +17,20 @@ It is complete solution for [MSR-Bing Image Retrieval Challenge](http://research
 * If you would like to use your own dataset, we recommand you to organize dataset in a fixed structure like sample data, which can minimize your coding effort.
 
 
-## Content
-As image and query are of two distinct modalities, they have to be represented in a common space so that cross-media relevance can be computed. We implement four individual methods in our package.
+## Content:
+In order to generate cross-media relevance, image and query have to be represented in a common space as they are of two distinct modalities. In our package, we implement four individual methods and how to fuse relevance form different methods.
+
 #####individual methods:
-* **image2text**: project image and query into Bag-of-Words space.
-* **text2image**: project image and query into visual feature space.
-* **text2image as Parzen window**: an extreme case of text2image.
-* **semantic embedding**:  project image and query into semantic space.
+* [image2text](image2text.py): project image and query into Bag-of-Words space.
+* [text2image](text2image.py): project image and query into visual feature space.
+* [text2image as Parzen window](parzenWindow.py): an extreme case of text2image.
+* [semantic embedding](semantic_embedding.py):  project image and query into semantic space.
 
 How to run these methods using our package, please refer to 'search_example.sh' and source code.
 
 #####Relevance fusion:
-* we employ Coordinate Ascent to learn optimized weights, then fuse different methods.
+* [weight optimization](weightOptimization.py) we employ Coordinate Ascent to learn optimized weights
+* [relevance fusion](relevanceFusion.py) then fuse different methods with optimized weights.
 
 The detials of employing relevance fusion, please refer to 'fusion_example.sh' and source code.
 
