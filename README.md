@@ -17,7 +17,7 @@ It is complete solution for [MSR-Bing Image Retrieval Challenge](http://research
 * If you would like to use your own dataset, we recommand you to organize dataset in a fixed structure like sample data, which can minimize your coding effort.
 
 
-## Content:
+### Content:
 In order to generate cross-media relevance, image and query have to be represented in a common space as they are of two distinct modalities. In our package, we implement four individual methods and how to fuse relevance from different methods.
 
 #####individual methods:
@@ -34,12 +34,12 @@ How to run these methods using our package, please refer to [search_example.sh](
 
 The detials of employing relevance fusion, please refer to [fusion_example.sh](fusion_example.sh) and source code.
 
-## Note:
+### Note:
 * After running different individual methods, you need firstly write the result path of these methods into file [data_source.txt](data/data_source.txt). 
 * The format of [data_source.txt](data/data_source.txt): first line is the path of ture label of dev date, following lines are the path of different individual methods, one line one method.
 * For ease of efficiency, we only run 20 text queries. If you want to run all 1000 queries, please rewrite  'qid.text.all.txt' in `/rootpath/msr2013dev/Annotations/` into 'qid.text.txt', while the program will take a while.
 
 
-## Reference:
+### Reference:
 
 [1] Jianfeng Dong, Xirong Li, Shuai Liao, Jieping Xu, Duanqing Xu, Xiaoyong Du. [Image Retrieval by Cross-Media Relevance Fusion](http://www.mmc.ruc.edu.cn/research/irc2015/p173-dong.pdf). ACM multimedia 2015
