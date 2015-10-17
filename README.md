@@ -1,7 +1,6 @@
 # cmrf
-Image Retrieval by Cross-Media Relevance Fusion
 
-The cmrf package implements Cross-Media Relevance Fusion [1], with
+The **cmrf** package implements **C**ross-**M**edia **R**elevance **F**usion [1], with
 four individual method (i.e. image2text, text2image, text2image as Parzen window and semantic embedding)
 learning optimized weights for relevance fusion
 cross-platform support (linux, mac, windows) 
