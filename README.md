@@ -13,10 +13,10 @@ The **cmrf** package implements **C**ross-**M**edia **R**elevance **F**usion [1]
 # Setup:
 
 * Add [simpleknn](https://github.com/li-xirong/simpleknn) to `PYTHONPATH`
-Change ROOT_PATH in basic/common.py to local folder where training and dev data are stored.
-Download sample data (from Clickture Dataset) without pre-computed visual feature.
-Download at leaset three visual feature ( i.e. train.caffenet.fc7 dev.caffenet.fc7 dev.caffenet.prob) and extract them into 'FeatureData' folder of sample data.
-Dowload word2vec model learned from user tags of 25 million Flickr images and extract them into ROOT_PATH.
+* Change `ROOT_PATH` in [basic/constant.py](basic/constant.py) to local folder where training and test data are stored
+Download [training](http://www.mmc.ruc.edu.cn/research/irc2015/data/msr2013train.tar.gz) and [test](http://www.mmc.ruc.edu.cn/research/irc2015/data/msr2013dev.tar.gz) data (from Clickture Dataset) without pre-computed visual feature.
+* Download at leaset three visual feature ( i.e. [train.caffenet.fc7](http://www.mmc.ruc.edu.cn/research/irc2015/data/train.ruccaffefc7.imagenet.tar.gz) [dev.caffenet.fc7](http://www.mmc.ruc.edu.cn/research/irc2015/data/dev.ruccaffefc7.imagenet.tar.gz) [dev.caffenet.prob](http://www.mmc.ruc.edu.cn/research/irc2015/data/dev.ruccaffeprob.imagenet.tar.gz)) and extract them into 'FeatureData' folder of sample data.
+* Dowload [word2vec](http://www.mmc.ruc.edu.cn/research/irc2015/data/flickr25m.word2vec.tar.gz) model learned from user tags of 25 million Flickr images and extract them into ROOT_PATH.
 
 
 As image and query are of two distinct modalities, they have to be represented in a common space so that cross-media relevance can be computed. We implement four individual methods in our package.
