@@ -6,12 +6,13 @@ The **cmrf** package implements **C**ross-**M**edia **R**elevance **F**usion [1]
 * cross-platform support (linux, mac, windows) 
 
 # Prerequisites:
-The package does not include any visual feature extractors. Features of training and test data need to be pre-computed, and converted to required binary format using txt2bin.py.
-To minimize one's coding effort, the package requires training data and test data to be organized in a fixed structure, see the sample data.
-All visual features had been used in our paper can be download from our project page.
+* The package does not include any visual feature extractors. Features of training and test data need to be pre-computed, and converted to required binary format using [txt2bin.py](https://github.com/li-xirong/simpleknn/blob/master/txt2bin.py).
+* To minimize one's coding effort, the package requires training data and test data to be organized in a fixed structure, see the sample [training](http://www.mmc.ruc.edu.cn/research/irc2015/data/msr2013train.tar.gz) and [test](http://www.mmc.ruc.edu.cn/research/irc2015/data/msr2013dev.tar.gz) data.
+* All visual features had been used in our paper can be download from our [project page](http://www.mmc.ruc.edu.cn/research/irc2015/index.html).
 
 # Setup:
-Download simpleknn and add it to PYTHONPATH.
+
+* Add [simpleknn](https://github.com/li-xirong/simpleknn) to `PYTHONPATH`
 Change ROOT_PATH in basic/common.py to local folder where training and dev data are stored.
 Download sample data (from Clickture Dataset) without pre-computed visual feature.
 Download at leaset three visual feature ( i.e. train.caffenet.fc7 dev.caffenet.fc7 dev.caffenet.prob) and extract them into 'FeatureData' folder of sample data.
