@@ -1,0 +1,5 @@
+/home/wdp/VisualSearch1/msr2013dev/Annotations/Image/conceptsmsr2013dev.txt
+/home/wdp/VisualSearch1/msr2013dev/SimilarityIndex/msr2013dev/MetaData/i2t/ruccaffefc7.imagenet
+/home/wdp/VisualSearch1/msr2013dev/SimilarityIndex/msr2013dev/MetaData/t2i/ruccaffefc7.imagenet
+/home/wdp/VisualSearch1/msr2013dev/SimilarityIndex/msr2013dev/MetaData/pw/ruccaffefc7.imagenet
+/home/wdp/VisualSearch1/msr2013dev/SimilarityIndex/msr2013dev/MetaData/se/ruccaffeprob.imagenet
