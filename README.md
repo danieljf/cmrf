@@ -1,25 +1,22 @@
 # cmrf
 
 The **cmrf** package implements **C**ross-**M**edia **R**elevance **F**usion [1], with
-* four individual method (i.e. image2text, text2image, text2image as Parzen window and semantic embedding)
-* learning optimized weights for relevance fusion
-* cross-platform support (linux, mac, windows) 
+* four individual method (i.e. image2text, text2image, text2image as Parzen window and semantic embedding),
+* learning optimized weights for relevance fusion,
+* cross-platform support (linux, mac, windows).
+It is complete solution for [MSR-Bing Image Retrieval Challenge](http://research.microsoft.com/en-US/projects/irc/).
 
 ## Prerequisites:
-
-* The package does not include any visual feature extractors. Features of training and test data need to be pre-computed, and converted to required binary format using [txt2bin.py](https://github.com/li-xirong/simpleknn/blob/master/txt2bin.py).
-* To minimize one's coding effort, the package requires training data and test data to be organized in a fixed structure, see the sample [training](http://www.mmc.ruc.edu.cn/research/irc2015/data/msr2013train.tar.gz) and [test](http://www.mmc.ruc.edu.cn/research/irc2015/data/msr2013dev.tar.gz) data.
-* All visual features had been used in our paper can be download from our [project page](http://www.mmc.ruc.edu.cn/research/irc2015/index.html).
-
-## Setup:
-
-* Add [simpleknn](https://github.com/li-xirong/simpleknn) to `PYTHONPATH`
-* Change `ROOT_PATH` in [basic/constant.py](basic/constant.py) to local folder where training and test data are stored
-Download [training](http://www.mmc.ruc.edu.cn/research/irc2015/data/msr2013train.tar.gz) and [test](http://www.mmc.ruc.edu.cn/research/irc2015/data/msr2013dev.tar.gz) data without pre-computed visual feature.
-* Download at leaset three visual feature ( i.e. [train.caffenet.fc7](http://www.mmc.ruc.edu.cn/research/irc2015/data/train.ruccaffefc7.imagenet.tar.gz) [dev.caffenet.fc7](http://www.mmc.ruc.edu.cn/research/irc2015/data/dev.ruccaffefc7.imagenet.tar.gz) [dev.caffenet.prob](http://www.mmc.ruc.edu.cn/research/irc2015/data/dev.ruccaffeprob.imagenet.tar.gz)) and extract them into 'FeatureData' folder of sample data.
+* Download the sample [training](http://www.mmc.ruc.edu.cn/research/irc2015/data/msr2013train.tar.gz) and [test](http://www.mmc.ruc.edu.cn/research/irc2015/data/msr2013dev.tar.gz) data without image visual feature.
+* Download at leaset three visual feature ( i.e. [train.caffenet.fc7](http://www.mmc.ruc.edu.cn/research/irc2015/data/train.ruccaffefc7.imagenet.tar.gz) [dev.caffenet.fc7](http://www.mmc.ruc.edu.cn/research/irc2015/data/dev.ruccaffefc7.imagenet.tar.gz) [dev.caffenet.prob](http://www.mmc.ruc.edu.cn/research/irc2015/data/dev.ruccaffeprob.imagenet.tar.gz)) and extract them into 'FeatureData' folder of sample data. All visual features had been used in our paper can be download from our [project page](http://www.mmc.ruc.edu.cn/research/irc2015/index.html).
+* Change `ROOT_PATH` in [basic/common.py](basic/common.py) to local folder where training and test data are stored in
 * Dowload [word2vec](http://www.mmc.ruc.edu.cn/research/irc2015/data/flickr25m.word2vec.tar.gz) model learned from user tags of 25 million Flickr images and extract them into `ROOT_PATH`.
+* Download [simpleknn](https://github.com/li-xirong/simpleknn) and add it to `PYTHONPATH`
+* The package does not include any visual feature extractors. Features of training and test data need to be pre-computed, and converted to required binary format using [txt2bin.py](https://github.com/li-xirong/simpleknn/blob/master/txt2bin.py).
+* If you would like to use your own dataset, we recommand you to organize dataset in a fixed structure like sample data, which can minimize your coding effort.
 
 
+## Content
 As image and query are of two distinct modalities, they have to be represented in a common space so that cross-media relevance can be computed. We implement four individual methods in our package.
 #####individual methods:
 * **image2text**: project image and query into Bag-of-Words space.
