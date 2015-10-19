@@ -9,12 +9,11 @@ The **cmrf** package completely implements Cross-Media Relevance Fusion, with
 
 
 ### Dependency:
-* Download the [data](http://www.mmc.ruc.edu.cn/research/irc2015/data/rucmmc_irc2015_data.tar.gz) without image visual feature.
-* Download image visual feature [ [required](http://www.mmc.ruc.edu.cn/research/irc2015/data/rucmmc_irc2015_required_feature.tar.gz)|. [optional](http://www.mmc.ruc.edu.cn/research/irc2015/data/rucmmc_irc2015_optional_feature.tar.gz)]
+* Download [data](http://www.mmc.ruc.edu.cn/research/irc2015/data/rucmmc_irc2015_data.tar.gz) without image visual feature.
+* Download image visual feature [ [required](http://www.mmc.ruc.edu.cn/research/irc2015/data/rucmmc_irc2015_required_feature.tar.gz)| [optional](http://www.mmc.ruc.edu.cn/research/irc2015/data/rucmmc_irc2015_optional_feature.tar.gz)]
 * Add [simpleknn](simpleknn) to `PYTHONPATH`.
 * Change `ROOT_PATH` in [basic/common.py](basic/common.py) to local folder where data are stored in.
-* If you would like to use your own dataset, we recommand you to organize dataset in a fixed structure like our data, which can minimize your coding effort.
-* The package does not include any visual feature extractors. Features of data need to be pre-computed, and converted to required binary format using [txt2bin.py](simpleknn/txt2bin.py).
+
 
 
 ### Description:
@@ -37,7 +36,9 @@ If it run successfully, the cross-media relevance of all the query-imge pairs wi
 
 
 ### Note:
-* As a show case, we only run 20 queries. If you want to run all the 1000 queries form Dev set, please rewrite  'qid.text.all.txt' in `/rootpath/msr2013dev/Annotations/` into 'qid.text.txt'. It will take a while.
+* As a show case, we only run 20 queries. If you want to run all the 1000 queries from Dev set, please rename  'qid.text.all.txt' in `/rootpath/msr2013dev/Annotations/` to 'qid.text.txt'. It will take a while.
+* If you would like to use your own dataset, we recommand you to organize dataset in a fixed structure like our data, which can minimize your coding effort.
+* The package does not include any visual feature extractors. Features of data need to be pre-computed, and converted to required binary format using [txt2bin.py](simpleknn/txt2bin.py).
 
 
 ### Reference:
