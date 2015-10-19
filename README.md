@@ -1,7 +1,7 @@
 # cmrf
 
 Participating in [MSR-Bing Image Retrieval Challenge](http://research.microsoft.com/en-US/projects/irc/), 
-we proposed `**C**ross-**M**edia **R**elevance **F**usion` [1].
+we proposed **C**ross-**M**edia **R**elevance **F**usion [1].
 The **cmrf** package completely implements Cross-Media Relevance Fusion, with
 * four individual method (i.e. image2text, text2image, text2image as Parzen window and semantic embedding),
 * learning optimized weights for relevance fusion,
@@ -37,8 +37,6 @@ If it run successfully, the cross-media relevance of all query-imge pair will be
 
 
 ### Note:
-* After running different individual methods, you need firstly write the result path of these methods into file [data_source.txt](data/data_source.txt). 
-* The format of [data_source.txt](data/data_source.txt): first line is the path of ture label of dev date, following lines are the path of different individual methods, one line one method.
 * As a show case, we only run 20 queries. If you want to run all the 1000 queries form Dev set, please rewrite  'qid.text.all.txt' in `/rootpath/msr2013dev/Annotations/` into 'qid.text.txt'. It will take a while.
 
 
