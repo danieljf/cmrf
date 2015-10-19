@@ -1,20 +1,20 @@
 # cmrf
 
 Participating in [MSR-Bing Image Retrieval Challenge](http://research.microsoft.com/en-US/projects/irc/), 
-we proposed **C**ross-**M**edia **R**elevance **F**usion [1].
+we proposed **C**ross-**M**edia **R**elevance **F**usion[1].
 The **cmrf** package completely implements Cross-Media Relevance Fusion, with
-* four individual method (i.e. image2text, text2image, text2image as Parzen window and semantic embedding),
+* four individual methods (i.e. image2text, text2image, text2image as Parzen window and semantic embedding),
 * learning optimized weights for relevance fusion,
 * cross-platform support (linux, mac, windows).
 
 
 ### Dependency:
 * Download the [data](http://www.mmc.ruc.edu.cn/research/irc2015/data/rucmmc_irc2015_data.tar.gz) without image visual feature.
-* Download at image visual feature ( i.e. [required](http://www.mmc.ruc.edu.cn/research/irc2015/data/rucmmc_irc2015_required_feature.tar.gz) [optional](http://www.mmc.ruc.edu.cn/research/irc2015/data/rucmmc_irc2015_optional_feature.tar.gz)
-* Add [simpleknn](simpleknn) to `PYTHONPATH`
-* Change `ROOT_PATH` in [basic/common.py](basic/common.py) to local folder where data are stored in
+* Download image visual feature [ [required](http://www.mmc.ruc.edu.cn/research/irc2015/data/rucmmc_irc2015_required_feature.tar.gz)|. [optional](http://www.mmc.ruc.edu.cn/research/irc2015/data/rucmmc_irc2015_optional_feature.tar.gz)]
+* Add [simpleknn](simpleknn) to `PYTHONPATH`.
+* Change `ROOT_PATH` in [basic/common.py](basic/common.py) to local folder where data are stored in.
 * If you would like to use your own dataset, we recommand you to organize dataset in a fixed structure like our data, which can minimize your coding effort.
-* The package does not include any visual feature extractors. Features of training and dev data need to be pre-computed, and converted to required binary format using [txt2bin.py](https://github.com/li-xirong/simpleknn/blob/master/txt2bin.py).
+* The package does not include any visual feature extractors. Features of data need to be pre-computed, and converted to required binary format using [txt2bin.py](simpleknn/txt2bin.py).
 
 
 ### Description:
@@ -33,7 +33,7 @@ In order to generate cross-media relevance, image and query have to be represent
 
 ### Get Started:
 You can run [doit.sh](doit.sh) to see if everything in place.
-If it run successfully, the cross-media relevance of all query-imge pair will be written in `result/final.result.txt` folder, and other intermediate results will in `result` folder.
+If it run successfully, the cross-media relevance of all the query-imge pairs will be written in `result/final.result.txt` folder, and other intermediate results will also appear in `result` folder.
 
 
 ### Note:
