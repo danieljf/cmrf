@@ -33,7 +33,7 @@ In order to generate cross-media relevance, image and query have to be represent
 
 ### Get Started:
 You can run [doit.sh](doit.sh) to see if everything in place.
-If it run successfully, the cross-media relevance of all query-imge pair will be writeen in `result/final.result.txt` folder, and other intermediate results will in `result` folder.
+If it run successfully, the cross-media relevance of all query-imge pair will be written in `result/final.result.txt` folder, and other intermediate results will in `result` folder.
 
 
 ### Note:
