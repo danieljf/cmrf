@@ -8,7 +8,7 @@ overwrite=1
 
 # combine result from different individul methods
 dev_collection=msr2013dev
-inputfile=data_source.txt
+inputfile=individual_result_pathes.txt
 resultname=qid.img.lable.feature.txt
 
 python combine_result.py $dev_collection --inputfile $inputfile --resultname $resultname --overwrite $overwrite

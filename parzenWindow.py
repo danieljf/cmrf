@@ -8,7 +8,7 @@ from util.irc_image import calImageSimiByCos
 from simpleknn.bigfile import BigFile
 from basic.metric import getScorer
 from basic.annotationtable import readAnnotationsFrom
-from basic.common import ROOT_PATH, printMessage, checkToSkip
+from basic.common import ROOT_PATH, printMessage, checkToSkip, makedirsforfile
 
 
 def calParzen(v, X, sig=20):
@@ -80,6 +80,14 @@ def process(options, collection):
     writeRankingResult(ranking_result_path, qid2iid_label_score)
     print "average DCG@25: %f" % (1.0*sum(qid2dcg.values())/ len(qid2dcg.values()))
 
+    result_path_file = "result/individual_result_pathes.txt"
+    if os.path.exists(result_path_file):
+        fout = open(result_path_file,'a')
+    else:
+        makedirsforfile(result_path_file)
+        fout = open(result_path_file, 'w')
+    fout.write(ranking_result_path + '\n')
+    fout.close()
 
 
 def main(argv=None):

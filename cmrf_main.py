@@ -13,7 +13,7 @@ from util.tools import readQidQuery, writeRankingResult, writeDCGResult
 from simpleknn.bigfile import BigFile
 from basic.metric import getScorer
 from basic.annotationtable import readAnnotationsFrom
-from basic.common import ROOT_PATH, printMessage, checkToSkip
+from basic.common import ROOT_PATH, printMessage, checkToSkip, makedirsforfile
 
 
 def process(options, trainCollection, devCollection):
@@ -119,6 +119,16 @@ def process(options, trainCollection, devCollection):
     writeDCGResult(DCG_result_path, qid2dcg)
     print "number of failed query: %d" % failed_count 
     print "average DCG@25: %f" % (1.0*sum(qid2dcg.values())/ len(qid2dcg.values()))
+
+    result_path_file = "result/individual_result_pathes.txt"
+    if os.path.exists(result_path_file):
+        fout = open(result_path_file,'a')
+    else:
+        makedirsforfile(result_path_file)
+        fout = open(result_path_file, 'w')
+    fout.write(ranking_result_path + '\n')
+    fout.close()
+    
 
 
 def main(argv=None):

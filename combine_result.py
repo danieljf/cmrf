@@ -31,9 +31,10 @@ def process(options, collection):
     qid_query_file = os.path.join(rootpath, collection, 'Annotations', 'qid.text.txt')
     qid_list, query_list = readQidQuery(qid_query_file)
 
-    method_count = 0
     num2file = {}
-    for line in open(os.path.join('data',inputfile)).readlines():
+    num2file[0] = os.path.join(rootpath, collection, 'Annotations', 'Image', 'concepts%s.txt' % collection)
+    method_count = 1
+    for line in open(os.path.join('result',inputfile)).readlines():
         num2file[method_count] = line.strip()
         method_count +=1
 
@@ -72,7 +73,7 @@ def main(argv=None):
 
     parser.add_option("--overwrite", default=0, type="int", help="overwrite existing file (default: 0)")
     parser.add_option("--rootpath", default=ROOT_PATH, type="string", help="rootpath (default: %s)" % ROOT_PATH)
-    parser.add_option("--inputfile", default='data_source.txt', type="string", help="path of different individul methods")
+    parser.add_option("--inputfile", default='individual_result_pathes.txt', type="string", help="path of different individul methods")
     parser.add_option("--resultname", default='qid.img.lable.feature.txt', type="str", help="result file name")
 
     
