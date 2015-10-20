@@ -43,4 +43,4 @@ If it run successfully, the cross-media relevance of all the query-imge pairs wi
 
 ### Reference:
 
-[1] Jianfeng Dong, Xirong Li, Shuai Liao, Jieping Xu, Duanqing Xu, Xiaoyong Du. [Image Retrieval by Cross-Media Relevance Fusion](http://www.mmc.ruc.edu.cn/research/irc2015/p173-dong.pdf). ACM Multimedia 2015 (Grand Challenge Session)
+[1] Jianfeng Dong, Xirong Li, Shuai Liao, Jieping Xu, Duanqing Xu, Xiaoyong Du. [Image Retrieval by Cross-Media Relevance Fusion](http://www.mmc.ruc.edu.cn/research/irc2015/p173-dong.pdf). ACM Multimedia 2015 (Multimedia Grand Challenge Session)
